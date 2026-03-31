@@ -7,11 +7,17 @@ A data-driven smart irrigation system that optimizes watering decisions using re
 This project focuses on building an intelligent irrigation solution using sensors and C++ logic. The system collects environmental data such as temperature and humidity, processes it, and makes automated decisions to improve water efficiency.
 
 ⚙️ Features
+
 🌡️ Real-time temperature monitoring
+
 💧 Humidity data collection and analysis
+
 🧠 Decision-making based on configurable thresholds
+
 🚿 Automated irrigation control
+
 ⚡ Efficient and lightweight C++ implementation
+
 🏗️ System Architecture
 Data Collection
 Sensors gather environmental data (temperature, humidity).
