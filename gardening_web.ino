@@ -16,20 +16,10 @@
 #define servo_pin 18
 #define LED 25
 
-// const char* ssid = "yaaqov13";
-// const char* password = "29071972";
 
-const char* ssid = "Avigail";
-const char* password = "0534184025";
+const char* ssid = "Your wifi name";
+const char* password = "The password";
 
-// const char* ssid = "MICHAL";
-// const char* password = "55555555";
-
-// const char* ssid = "ZTE_099AFB";
-// const char* password = "27237836";
-
-// const char* ssid = "netfree111";
-// const char* password = " 0583202476";
 
 WiFiClient client;
 
