@@ -1,4 +1,4 @@
-#🌱 Smart Irrigation System
+🌱 Smart Irrigation System
 
 A data-driven smart irrigation system that optimizes watering decisions using real-time environmental data.
 
