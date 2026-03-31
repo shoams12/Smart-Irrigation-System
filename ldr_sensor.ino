@@ -7,7 +7,7 @@ bool ldr_sensor() {
 
   print_str = "ldr is: " + String(analogReadPin);
  
-// פחות אור יותר התנגדות
+// Less light, more resistance
   if (analogReadPin < 2000){
    ligthLevel= "dark outside"; 
     return true;}
