@@ -19,14 +19,23 @@ This project focuses on building an intelligent irrigation solution using sensor
 ⚡ Efficient and lightweight C++ implementation
 
 🏗️ System Architecture
+
 Data Collection
+
 Sensors gather environmental data (temperature, humidity).
+
 Data Processing
+
 Raw data is processed and normalized for decision-making.
+
 Decision Logic
+
 The system evaluates conditions against predefined thresholds.
+
 Action Execution
+
 Irrigation is triggered or stopped בהתאם לתנאים.
+
 🧠 How It Works
 
 The system continuously monitors environmental conditions and applies logic such as:
@@ -38,18 +47,31 @@ Temperature can influence watering frequency
 This ensures efficient water usage and prevents over-irrigation.
 
 🛠️ Technologies Used
+
 C++ – core system logic
+
 Embedded Systems / Sensors – data collection
+
 Basic Data Processing Techniques
+
 🚀 Future Improvements
+
 Integration with IoT platforms
+
 Mobile or web dashboard for monitoring
+
 Machine learning for predictive irrigation
+
 Weather API integration
+
 📷 Potential Use Cases
+
 Smart agriculture
+
 Home gardening systems
+
 Greenhouses
+
 🤝 Contributing
 
 Contributions are welcome! Feel free to fork the repo and submit a pull request.
