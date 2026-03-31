@@ -1,0 +1,77 @@
+
+//ממסר כחול לכחול כתום לצהוב ירוק לירוק 
+Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+
+float valtemp;  //holds the value for the temp sensor
+
+int delayval = 100;       //neopixels
+int resval = 0;           // holds the value for the water sensor in container
+int rainval=0;            // holds the value for the water sensor on roof
+// int dryThreshold = 4000;  //threshold based on the soil and sensor characteristics
+// int wetThreshold = 2800;
+
+// String mh_soil_sensor_print = "";
+Servo my_servo;
+
+bool is_roof_open_flag = false;
+
+void setup() {
+
+  Wire.begin();
+  Serial.begin(115200);
+  configTemp(LM75_addr);
+
+  // pinMode(SOIL_MOISTURE_PIN, INPUT);
+  
+  pinMode(LDR, INPUT);
+
+  pixels.begin();
+
+  my_servo.attach(servo_pin);
+  my_servo.write(0);
+  pinMode(LED, OUTPUT);
+  pinMode(WATER_PIN, INPUT);
+  pinMode(WATER_SENSOR_RAIN, INPUT);
+  // pinMode(IN_1, OUTPUT);
+  // pinMode(IN_2, OUTPUT);
+  // ledcAttachPin(pump, PWM1_Channel);
+  // ledcSetup(PWM1_Channel, PWM1_Freq, PWM1_Resolution);
+}
+
+void loop() {
+
+//------------------------
+//moisture to pump
+  // if (soil_sensor())
+  //   pumping();
+  // else stopPump();
+
+//light is needed
+  if (ldr_sensor())
+    led_on();
+
+  else
+    led_off();
+
+// //if water container empty then tone()
+   if(water_container_sensor()){
+      digitalWrite(LED, HIGH);
+    }else{
+      digitalWrite(LED, LOW);
+    }
+ 
+ //if temp high or there is rain
+  if(is_open_roof() || rain_detect()){
+      open_roof_servo();
+      is_roof_open_flag=true;//open means the roof was activated
+  }
+    
+  
+  else{
+    close_roof_servo();
+    is_roof_open_flag=false;
+  } 
+
+
+
+}
