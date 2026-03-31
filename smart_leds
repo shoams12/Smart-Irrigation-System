@@ -1,5 +1,5 @@
 
-//ממסר כחול לכחול כתום לצהוב ירוק לירוק 
+//Relay blue to blue orange to yellow green to green
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 float valtemp;  //holds the value for the temp sensor
